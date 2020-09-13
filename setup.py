@@ -1,2 +1,5 @@
 #!/usr/bin/env python
-raise NotImplementedError("Setup not implemented yet.")
+
+import setuptools
+
+setuptools.setup(setup_requires=['pbr'], pbr=True)

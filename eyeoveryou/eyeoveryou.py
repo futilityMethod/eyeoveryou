@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 
-from decouple import config
-import ipinfo
 import pprint
+from ip_info_client import get_ip_info
+from metaweather import get_weather
 
-access_token = config('IPINFOKEY')
-handler = ipinfo.getHandler(access_token)
-ip_address = '99.68.149.72'
-details = handler.getDetails(ip_address)
+details = get_ip_info('151.101.65.69')
+weather = get_weather(details.all['loc'])
 pprint.pprint(details.all)
+pprint.pprint(weather)
