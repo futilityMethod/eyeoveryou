@@ -1,10 +1,10 @@
-from decouple import config
+import app
 import ipinfo
 import pprint
 
 
 def get_ip_info(ip):
-    access_token = config('IPINFOKEY')
+    access_token = app.config('IPINFOKEY')
     handler = ipinfo.getHandler(access_token)
     return handler.getDetails(ip)
 

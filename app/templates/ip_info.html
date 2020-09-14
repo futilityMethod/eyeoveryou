@@ -1,5 +1,7 @@
 <div>
+    {% if ip %}
     <p>{{ip.city}}, {{ip.region}} {{ip.postal}}, {{ip.country}}</p>
     <p>{{ip.loc}}</p>
     <p>{{ip.timezone}}</p>
+    {% endif %}
 </div>
