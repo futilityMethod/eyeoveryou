@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user %}
+    <h1>Hello, {{ user.username }}</h1>
+    {% else %}
+    <h1> Hello </h1>
+    {% endif %}
+
+    <div><p><b>{{ip_info.city}}, {{ip_info.country}}</b></p></div>
+    <div><p><b>Current Weather: </b> {{weather.the_temp}} and {{weather.weather_state_name}}</p></div>
+{% endblock %}
