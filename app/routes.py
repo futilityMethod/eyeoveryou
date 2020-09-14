@@ -9,7 +9,7 @@ from app.widgets.metaweather import get_weather
 def index():
     ip_info = get_ip_info('151.101.65.69')
     weather = get_weather(ip_info.all['loc'])
-    return render_template('index.html', title='EyeOverYou', ip_info=ip_info, weather=weather)
+    return render_template('index.html', title='EyeOverYou', ip=ip_info, weather=weather)
 
 
 @app.route('/about')
